@@ -4,6 +4,7 @@ package pl.coderslab.entity;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
@@ -14,7 +15,7 @@ public class Target {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotEmpty
+    @NotBlank
     private String targetName;
 
     @NotNull

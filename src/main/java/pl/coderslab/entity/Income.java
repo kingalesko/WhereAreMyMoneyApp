@@ -4,6 +4,7 @@ package pl.coderslab.entity;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class Income {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotEmpty
+    @NotBlank
     private String name;
 
     @NotNull

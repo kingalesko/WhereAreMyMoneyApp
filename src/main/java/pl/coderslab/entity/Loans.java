@@ -5,6 +5,7 @@ import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 
@@ -16,7 +17,7 @@ public class Loans {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotEmpty
+    @NotBlank
     private String bankName;
 
     @ManyToOne

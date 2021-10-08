@@ -4,6 +4,7 @@ import com.sun.istack.NotNull;
 import jdk.jfr.DataAmount;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 
@@ -15,7 +16,7 @@ public class Expenses {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotEmpty
+    @NotBlank
     private String shopName;
 
     @NotNull
