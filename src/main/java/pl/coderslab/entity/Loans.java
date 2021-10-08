@@ -7,8 +7,6 @@ import com.sun.istack.Nullable;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "loan")
@@ -21,9 +19,8 @@ public class Loans {
     @NotEmpty
     private String bankName;
 
-    @ManyToMany
-    @NotEmpty
-    private List <LoanCategory> loanCategory = new ArrayList<>();
+    @ManyToOne
+    private LoanCategory loanCategory;
 
     @Nullable
     private int installmentsNum;
@@ -31,11 +28,11 @@ public class Loans {
     @Nullable
     private double installment;
 
-    @Nullable
-    private LocalDate endDate;
-
-    @NotNull
-    private double sumOfTheLoan;
+//    @Nullable
+//    private LocalDate endDate;
+//
+//    @NotNull
+//    private double sumOfTheLoan;
 
     @ManyToOne
     @JoinColumn(name = "family_member_id")
@@ -49,11 +46,11 @@ public class Loans {
         this.familyMember = familyMember;
     }
 
-    public List<LoanCategory> getLoanCategory() {
+    public LoanCategory getLoanCategory() {
         return loanCategory;
     }
 
-    public void setLoanCategory(List<LoanCategory> loanCategory) {
+    public void setLoanCategory(LoanCategory loanCategory) {
         this.loanCategory = loanCategory;
     }
 
@@ -89,21 +86,21 @@ public class Loans {
         this.installment = installment;
     }
 
-    public LocalDate getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
-
-    public double getSumOfTheLoan() {
-        return sumOfTheLoan;
-    }
-
-    public void setSumOfTheLoan(double sumOfTheLoan) {
-        this.sumOfTheLoan = sumOfTheLoan;
-    }
+//    public LocalDate getEndDate() {
+//        return endDate;
+//    }
+//
+//    public void setEndDate(LocalDate endDate) {
+//        this.endDate = endDate;
+//    }
+//
+//    public double getSumOfTheLoan() {
+//        return sumOfTheLoan;
+//    }
+//
+//    public void setSumOfTheLoan(double sumOfTheLoan) {
+//        this.sumOfTheLoan = sumOfTheLoan;
+//    }
 
     @Override
     public String toString() {
@@ -113,8 +110,6 @@ public class Loans {
                 ", loanCategory=" + loanCategory +
                 ", installmentsNum=" + installmentsNum +
                 ", installment=" + installment +
-                ", endDate=" + endDate +
-                ", sumOfTheLoan=" + sumOfTheLoan +
                 ", familyMember=" + familyMember.getNickName() +
                 '}';
     }

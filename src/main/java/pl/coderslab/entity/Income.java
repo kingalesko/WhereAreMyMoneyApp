@@ -5,6 +5,9 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "income")
@@ -18,11 +21,20 @@ public class Income {
     private String name;
 
     @NotNull
-    private double income;
+    private double payment;
 
-    @OneToOne
-    @JoinColumn(name = "member_id", unique = true)
+    private LocalDate date;
+
+    @ManyToOne
     private FamilyMembers familyMember;
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
     public FamilyMembers getFamilyMember() {
         return familyMember;
@@ -48,12 +60,12 @@ public class Income {
         this.name = name;
     }
 
-    public double getIncome() {
-        return income;
+    public double getPayment() {
+        return payment;
     }
 
-    public void setIncome(double income) {
-        this.income = income;
+    public void setPayment(double payment) {
+        this.payment = payment;
     }
 
     @Override
@@ -61,7 +73,8 @@ public class Income {
         return "Income{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", income=" + income +
+                ", income=" + payment +
+                ", date=" + date +
                 ", familyMember=" + familyMember +
                 '}';
     }

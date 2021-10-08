@@ -1,9 +1,11 @@
 package pl.coderslab.entity;
 
 import com.sun.istack.NotNull;
+import jdk.jfr.DataAmount;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "expenses")
@@ -14,13 +16,31 @@ public class Expenses {
     private long id;
 
     @NotEmpty
-    private String expenseName;
+    private String shopName;
 
     @NotNull
     private double expense;
 
+    private LocalDate date;
+
     @ManyToOne
     private ExpenseCategory category;
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
     public long getId() {
         return id;
@@ -31,11 +51,11 @@ public class Expenses {
     }
 
     public String getExpenseName() {
-        return expenseName;
+        return shopName;
     }
 
     public void setExpenseName(String expenseName) {
-        this.expenseName = expenseName;
+        this.shopName = shopName;
     }
 
     public double getExpense() {
@@ -58,8 +78,9 @@ public class Expenses {
     public String toString() {
         return "Expenses{" +
                 "id=" + id +
-                ", expenseName='" + expenseName + '\'' +
+                ", shopName='" + shopName + '\'' +
                 ", expense=" + expense +
+                ", date=" + date +
                 ", category=" + category +
                 '}';
     }
