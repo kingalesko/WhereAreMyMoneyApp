@@ -6,7 +6,7 @@
     <form:hidden path="id"/>
 
     Nazwa banku: <form:input path="bankName" /> <br />
-    <form:errors path="bankName"/><br />
+    <form:errors path="bankName" cssClass="error" element="div"/><br />
     Rodzaj pożyczki: <form:select path="loanCategory.id" items="${loansCategories}"
                             itemValue="id" itemLabel="name"/> <br />
     <form:errors path="loanCategory.id"/><br />

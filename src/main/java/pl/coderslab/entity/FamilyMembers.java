@@ -16,7 +16,7 @@ public class FamilyMembers {
     private long id;
 
     @NotBlank
-    @Size(min = 3, max = 20)
+    @Size(min = 3, max = 20, message = "Długość znaków od 3 do 20.")
     private String nickName;
 
     public long getId() {

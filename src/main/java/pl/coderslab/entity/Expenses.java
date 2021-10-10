@@ -2,10 +2,13 @@ package pl.coderslab.entity;
 
 import com.sun.istack.NotNull;
 import jdk.jfr.DataAmount;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+import javax.websocket.OnMessage;
 import java.time.LocalDate;
 
 @Entity
@@ -16,7 +19,8 @@ public class Expenses {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
+    @NotBlank(message = "Wartość nie może być pusta")
+    @Size(min = 2, max = 20, message = "Nazwa musi mieć od 2 do 20 znaków")
     private String shopName;
 
     @NotNull

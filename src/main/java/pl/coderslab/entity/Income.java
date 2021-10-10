@@ -6,6 +6,7 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class Income {
     private long id;
 
     @NotBlank
+    @Size(max = 30, message = "Maksymalna długość 30 znaków.")
     private String name;
 
     @NotNull

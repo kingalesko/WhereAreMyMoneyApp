@@ -1,13 +1,11 @@
 package pl.coderslab.entity;
 
 
-import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import java.time.LocalDate;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "loan")
@@ -18,6 +16,7 @@ public class Loans {
     private long id;
 
     @NotBlank
+    @Size(min = 3, max = 20, message = "Długość znaków od 3 do 20.")
     private String bankName;
 
     @ManyToOne

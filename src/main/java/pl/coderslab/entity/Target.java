@@ -5,7 +5,7 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "targets")
@@ -16,6 +16,7 @@ public class Target {
     private long id;
 
     @NotBlank
+    @Size(min = 3, max = 40, message = "Długość znaków powinna być z zakresu od 3 do 40.")
     private String targetName;
 
     @NotNull
