@@ -1,6 +1,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<!doctype html>
+<html lang="pl-PL">
+<head>
+    <title>Formularz dodawania/zmian</title>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+</html>
 <form:form method="post" modelAttribute="loan">
 
     <form:hidden path="id"/>

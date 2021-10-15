@@ -1,4 +1,12 @@
-<h2>Czy chcesz usunąć to zobowiązanie? ${loan.name} ?</h2>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<!doctype html>
+<html lang="pl-PL">
+<head>
+    <title>Usuwanie</title>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+</html>
+<h2>Czy chcesz usunąć to zobowiązanie: ${loan.name} ?</h2>
 
 <form method="post">
     <input type="hidden" name="toRemoveId" value="${loan.id}">
