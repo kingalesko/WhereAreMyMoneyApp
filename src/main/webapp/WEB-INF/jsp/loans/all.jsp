@@ -5,7 +5,7 @@
 <html lang="pl-PL">
 <head>
     <title>Kredyty</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../theme/css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 
@@ -46,7 +46,6 @@
                 <td>${loanTotal}</td>
             </c:otherwise>
         </c:choose>
-    </tr>
     <td><a href="edit?idToEdit=${loan.id}">Edytuj</a></td>
     <td><a href="remove?toRemoveId=${loan.id}">Usuń</a></td>
     </tr>

@@ -5,7 +5,7 @@
 <html lang="pl-PL">
 <head>
     <title>Formularz dodawania/zmian</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../theme/css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 <form:form method="post" modelAttribute="expenses">
@@ -16,7 +16,7 @@
     <form:errors path="shopName"/><br />
     Total price: <form:input path="expense" /> <br />
     <form:errors path="expense"/><br />
-    Data: <form:input path="date" /> <br />
+    Data: <form:input type="date" path="date" /> <br />
     <form:errors path="date"/><br />
     Kategoria: <form:select path="category.id" items="${categories}"
                          itemValue="id" itemLabel="name"/> <br />

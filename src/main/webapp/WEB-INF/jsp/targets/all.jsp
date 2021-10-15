@@ -5,7 +5,7 @@
 <html lang="pl-PL">
 <head>
     <title>Cele</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../theme/css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 
@@ -27,7 +27,7 @@
 <tbody><tr>
 <c:forEach items="${allTargets}" var="target">
     <td>${target.targetName}</td>
-    <td>${target.price}</td></tr>
+    <td>${target.price}</td>
 <td><a href="edit?idToEdit=${target.id}">Edytuj</a></td>
 <td><a href="remove?toRemoveId=${target.id}">Usuń</a></td></tr>
 </c:forEach>

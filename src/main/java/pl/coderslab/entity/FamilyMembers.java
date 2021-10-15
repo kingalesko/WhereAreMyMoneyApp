@@ -15,7 +15,6 @@ public class FamilyMembers {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
     @Size(min = 3, max = 20, message = "Długość znaków od 3 do 20.")
     private String nickName;
 

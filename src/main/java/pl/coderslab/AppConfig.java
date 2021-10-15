@@ -13,13 +13,13 @@ import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.LocaleContextResolver;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import java.util.Locale;
 
 
 @Configuration
 @ComponentScan("pl.coderslab")
-@EnableJpaRepositories(basePackages = "pl.coderslab.repository")
 @EnableTransactionManagement
 public class AppConfig {
 

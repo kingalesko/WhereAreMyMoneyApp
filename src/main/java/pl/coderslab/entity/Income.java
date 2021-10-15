@@ -2,11 +2,12 @@ package pl.coderslab.entity;
 
 
 import com.sun.istack.NotNull;
+import jdk.jfr.DataAmount;
+import org.springframework.boot.convert.DataSizeUnit;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +20,10 @@ public class Income {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
-    @Size(max = 30, message = "Maksymalna długość 30 znaków.")
+    @Size(min = 1, max = 30, message = "Maksymalna długość 30 znaków.")
     private String name;
 
-    @NotNull
+    @Min(value = 1, message = "Wartość musi być większa niż 1.")
     private double payment;
 
     private LocalDate date;

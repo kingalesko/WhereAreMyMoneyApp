@@ -15,7 +15,6 @@ public class Loans {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
     @Size(min = 3, max = 20, message = "Długość znaków od 3 do 20.")
     private String bankName;
 
@@ -27,12 +26,6 @@ public class Loans {
 
     @Nullable
     private double installment;
-
-//    @Nullable
-//    private LocalDate endDate;
-//
-//    @NotNull
-//    private double sumOfTheLoan;
 
     @ManyToOne
     @JoinColumn(name = "family_member_id")

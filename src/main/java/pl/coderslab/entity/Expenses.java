@@ -5,6 +5,7 @@ import jdk.jfr.DataAmount;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -22,7 +23,7 @@ public class Expenses {
     @Size(min = 2, max = 20, message = "Nazwa musi mieć od 2 do 20 znaków")
     private String shopName;
 
-    @NotNull
+    @Min(value = 1, message = "Wartość musi być większa niż 1.")
     private double expense;
 
     private LocalDate date;

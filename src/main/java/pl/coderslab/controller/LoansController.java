@@ -51,7 +51,7 @@ public class LoansController {
     }
 
     @PostMapping("/loansForm/add")
-    public String persistAuthor(@Valid Loans loan, BindingResult result) {
+    public String persistAuthor(@ModelAttribute("loan")@Valid Loans loan, BindingResult result) {
         if (result.hasErrors()) {
             return "loans/form";
         }

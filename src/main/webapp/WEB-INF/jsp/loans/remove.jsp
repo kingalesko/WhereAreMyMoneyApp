@@ -3,7 +3,7 @@
 <html lang="pl-PL">
 <head>
     <title>Usuwanie</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../theme/css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 <h2>Czy chcesz usunąć to zobowiązanie: ${loan.name} ?</h2>

@@ -2,11 +2,11 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!doctype html>
 <html lang="pl-PL">
+<link href="../../../theme/css/style.css" rel="stylesheet" type="text/css">
+
 <head>
     <title>Członkowie rodziny</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
-</html>
 <h2> Lista wszystkich członków rodziny </h2>
 
 <a href="add">
@@ -32,3 +32,4 @@
 <br/>
 <a href="..">Powrót do strony głównej</a>
 
+</html>

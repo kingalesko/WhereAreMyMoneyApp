@@ -4,6 +4,7 @@ package pl.coderslab.entity;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -15,11 +16,10 @@ public class Target {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
-    @Size(min = 3, max = 40, message = "Długość znaków powinna być z zakresu od 3 do 40.")
+    @Size(min = 3, max = 40, message = "Długość znaków musi być z zakresu od 3 do 40.")
     private String targetName;
 
-    @NotNull
+    @Min(value = 1, message = "Wartość musi być większa niż 1.")
     private double price;
 
     public long getId() {

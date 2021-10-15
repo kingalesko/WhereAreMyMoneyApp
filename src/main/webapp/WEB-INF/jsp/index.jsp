@@ -3,11 +3,10 @@
 <!doctype html>
 <html lang="pl-PL">
 <head>
+    <link href="<c:url value="/css/style.css"/>" rel="stylesheet">
     <title>Where Are My Money?!</title>
 </head>
-
 <body>
-<link href="../css/style.css" rel="stylesheet" type="text/css">
 <h2><a href="familyForm/list"> Członkowie rodziny  </a> </h2>
 <h2><a href="expensesForm/list"> Wydatki  </a> </h2>
 <h2><a href="incomesForm/list"> Dochody  </a> </h2>

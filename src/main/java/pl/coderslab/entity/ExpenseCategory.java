@@ -16,7 +16,7 @@ public class ExpenseCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
+    @NotBlank(message = "To pole jest wymagane.")
     private String name;
 
     public long getId() {
