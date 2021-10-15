@@ -7,12 +7,21 @@
     Dodaj cel
 </a>
 
+<table>
+<thead>
+<tr>
+    <td>Cel</td>
+    <td>Cena</td>
+</tr>
+</thead>
+<tbody><tr>
 <c:forEach items="${allTargets}" var="target">
-    <br />
-    ----------------------------
-    <br />
-    Cel: ${target.targetName} <br />
-   Cena: ${target.price} <br />
+    <td>${target.targetName}</td>
+    <td>${target.price}</td></tr>
+</c:forEach>
+
+</tbody>
+</table>
     <a href="edit?idToEdit=${target.id}">
         Edytuj
     </a>
@@ -21,5 +30,3 @@
         Usuń
     </a>
     <br/>
-
-</c:forEach>
