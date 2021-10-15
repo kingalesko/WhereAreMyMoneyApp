@@ -39,44 +39,44 @@ public class ExpensesController {
 
     @GetMapping("/expensesForm/add")
     public String initAddForm(Model model) {
-        model.addAttribute("expense", new Expenses());
+        model.addAttribute("expenses", new Expenses());
         return "expenses/form";
     }
 
     @PostMapping("/expensesForm/add")
-    public String persistAuthor(@Valid Expenses expense, BindingResult result) {
+    public String persistAuthor(@Valid Expenses expenses, BindingResult result) {
         if (result.hasErrors()) {
             return "expenses/form";
         }
-        expensesDao.persist(expense);
+        expensesDao.persist(expenses);
         return "redirect:/expensesForm/list";
     }
     @GetMapping("/expensesForm/edit")
     public String prepareEdit(@RequestParam Long idToEdit, Model model) {
-        model.addAttribute("expense", expensesDao.findById(idToEdit));
+        model.addAttribute("expenses", expensesDao.findById(idToEdit));
         return "expenses/form";
     }
 
     @PostMapping("/expensesForm/edit")
-    public String merge(@Valid Expenses expense, BindingResult result) {
+    public String merge(@Valid Expenses expenses, BindingResult result) {
         if (result.hasErrors()) {
             return "expenses/form";
         }
-        expensesDao.merge(expense);
+        expensesDao.merge(expenses);
         return "redirect:/expensesForm/list";
     }
 
     @GetMapping("/expensesForm/remove")
     public String prepareRemove(@RequestParam Long toRemoveId, Model model) {
-        model.addAttribute("expense", expensesDao.findById(toRemoveId));
+        model.addAttribute("expenses", expensesDao.findById(toRemoveId));
         return "expenses/remove";
     }
 
     @PostMapping("/expensesForm/remove")
     public String remove(@RequestParam String confirmed, @RequestParam Long toRemoveId) {
         if ("yes".equals(confirmed)) {
-            Expenses expense = expensesDao.findById(toRemoveId);
-            expensesDao.remove(expense);
+            Expenses expenses = expensesDao.findById(toRemoveId);
+            expensesDao.remove(expenses);
         }
         return "redirect:/expensesForm/list";
     }

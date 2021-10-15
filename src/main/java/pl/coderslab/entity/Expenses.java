@@ -19,7 +19,6 @@ public class Expenses {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank(message = "Wartość nie może być pusta")
     @Size(min = 2, max = 20, message = "Nazwa musi mieć od 2 do 20 znaków")
     private String shopName;
 
