@@ -3,7 +3,8 @@
 <!doctype html>
 <html lang="pl-PL">
 <head>
-    <link href="<c:url value="/css/style.css"/>" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+
     <title>Where Are My Money?!</title>
 </head>
 <body>

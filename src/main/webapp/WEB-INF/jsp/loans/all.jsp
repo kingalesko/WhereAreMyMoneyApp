@@ -5,7 +5,7 @@
 <html lang="pl-PL">
 <head>
     <title>Kredyty</title>
-    <link href="../../../theme/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 

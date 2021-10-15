@@ -4,7 +4,7 @@
 <html lang="pl-PL">
 <head>
     <title>Dochody</title>
-    <link href="../../../theme/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 <h2> Lista wszystkich dochodów </h2>

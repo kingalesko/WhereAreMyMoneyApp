@@ -3,7 +3,7 @@
 <html lang="pl-PL">
 <head>
     <title>Usuwanie</title>
-    <link rel="stylesheet" type="text/css" href="../../../theme/css/style.css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h2>Czy chcesz usunąć cel: ${target.targetName} ?</h2>
