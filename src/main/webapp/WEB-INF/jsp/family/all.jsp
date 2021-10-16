@@ -2,17 +2,17 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!doctype html>
 <html lang="pl-PL">
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
 
 <head>
     <title>Członkowie rodziny</title>
 </head>
 <h2> Lista wszystkich członków rodziny </h2>
-
+<br/>
 <a href="add">
     Dodaj członka rodziny
 </a>
-<br/>
+<br/><br/>
 <table>
 <thead>
 <tr>
@@ -29,7 +29,7 @@
 </c:forEach>
     </tbody>
     </table>
-<br/>
+<br/><br/>
 <a href="..">Powrót do strony głównej</a>
 
 </html>

@@ -5,15 +5,16 @@
 <html lang="pl-PL">
 <head>
     <title>Cele</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
 </head>
-</html>
+
 
 <h2> Lista celów </h2>
-
+<br/>
 <a href="add">
     Dodaj cel
 </a>
+<br/>
 <br/>
 <table>
 <thead>
@@ -34,4 +35,6 @@
 </tbody>
 </table>
 <br/>
+<br/>
 <a href="..">Powrót do strony głównej</a>
+</html>

@@ -3,13 +3,15 @@
 <html lang="pl-PL">
 <head>
     <title>Usuwanie</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
-<h2>Czy chcesz usunąć to zobowiązanie: ${loan.name} ?</h2>
+<h2>Czy chcesz usunąć to zobowiązanie: ${loans.name} ?</h2>
 
 <form method="post">
-    <input type="hidden" name="toRemoveId" value="${loan.id}">
+    <input type="hidden" name="toRemoveId" value="${loans.id}">
     <button type="submit" value="yes" name="confirmed">TAK</button>
     <button type="submit" value="no" name="confirmed">NIE</button>
 </form>
+<br/><br/>
+<a href="..">Powrót do strony głównej</a>

@@ -5,16 +5,16 @@
 <html lang="pl-PL">
 <head>
     <title>Kredyty</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 
 <h2> Lista wszystkich kredytów </h2>
-
+<br/>
 <a href="add">
     Dodaj zobowiązanie
 </a>
-<br/>
+<br/><br/>
 <table>
     <thead>
     <tr>
@@ -32,7 +32,7 @@
     <tr>
         <c:set var="loanTotal" value="${0}"/>
         <c:forEach items="${allLoans}" var="loan">
-        <c:set var="loanTotal" value="${loanTotal + loan.installmentsNum * loan.installment}"/>
+        <c:set var="loanTotal" value="${loan.installmentsNum * loan.installment}"/>
         <td>${loan.bankName} </td>
         <td>${loan.loanCategory.name} </td>
         <td>${loan.installmentsNum}</td>
@@ -52,5 +52,5 @@
     </c:forEach>
     </tbody>
 </table>
-<br/>
+<br/><br/>
 <a href="..">Powrót do strony głównej</a>

@@ -3,10 +3,10 @@
 <html lang="pl-PL">
 <head>
     <title>Usuwanie</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h2>Czy chcesz usunąć cel: ${target.targetName} ?</h2>
+<h2>Czy chcesz usunąć cel?</h2>
 
 <form method="post">
     <input type="hidden" name="toRemoveId" value="${target.id}">
@@ -15,3 +15,5 @@
 </form>
 </body>
 </html>
+<br/><br/>
+<a href="..">Powrót do strony głównej</a>

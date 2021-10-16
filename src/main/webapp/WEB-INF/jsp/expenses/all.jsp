@@ -4,14 +4,15 @@
 <html lang="pl-PL">
 <head>
     <title>Wydatki</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 <h2> Lista wszystkich wydatków </h2>
-
+<br/>
 <a href="add">
     Dodaj wydatek
 </a>
+<br/>
 <br/>
 <table>
     <thead>
@@ -39,6 +40,7 @@
     </thead>
 </table>
 <br/>
-Suma wydatków: ${expTotal}
 <br/>
+Suma wydatków: ${expTotal}
+<br/><br/>
 <a href="..">Powrót do strony głównej</a>

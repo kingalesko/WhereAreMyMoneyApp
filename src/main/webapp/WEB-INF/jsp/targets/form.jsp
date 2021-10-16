@@ -5,7 +5,7 @@
 <html lang="pl-PL">
 <head>
     <title>Formularz dodawania/zmian</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 <form:form method="post" modelAttribute="target">
@@ -20,3 +20,5 @@
     <input type="submit">
 
 </form:form>
+<br/><br/>
+<a href="..">Powrót do strony głównej</a>

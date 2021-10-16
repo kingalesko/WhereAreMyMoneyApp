@@ -5,7 +5,7 @@
 <html lang="pl-PL">
 <head>
     <title>Formularz dodawania/zmian</title>
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 <form:form method="post" modelAttribute="income">
@@ -16,7 +16,7 @@
     <form:errors path="name"/><br />
     Kwota dochodu: <form:input path="payment" /> <br />
     <form:errors path="payment"/><br />
-    Data: <form:input type="date" path="date" /> <br />
+    Data(DD.MM.RRRR): <form:input path="date" /> <br />
     <form:errors path="date"/><br />
     Kogo to dochód? : <form:select path="familyMember.id" items="${familyMembers}"
                             itemValue="id" itemLabel="nickName"/> <br />
@@ -25,3 +25,5 @@
     <input type="submit">
 
 </form:form>
+<br/><br/>
+<a href="..">Powrót do strony głównej</a>
