@@ -1,13 +1,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
-<!doctype html>
-<html lang="pl-PL">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <head>
     <title>Formularz dodawania/zmian</title>
-    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
+    <%@ include file="../header.jsp" %>
+
+    <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
 </head>
-</html>
+
 <form:form method="post" modelAttribute="income">
 
     <form:hidden path="id"/>
@@ -27,3 +28,4 @@
 </form:form>
 <br/><br/>
 <a href="..">Powrót do strony głównej</a>
+<%@ include file="../footer.jsp" %>

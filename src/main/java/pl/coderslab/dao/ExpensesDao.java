@@ -7,6 +7,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @Transactional
@@ -33,5 +34,9 @@ public class ExpensesDao {
     public List<Expenses> findAll() {
         Query query = entityManager.createQuery("SELECT a from Expenses a");
         return query.getResultList();
+    }
+    public List<Expenses>getExpensesByDate(){
+        Query query1 = entityManager.createQuery("select e from Expenses e WHERE FUNCTION('MONTH', e.date) = FUNCTION('MONTH', FUNCTION('NOW()')) AND function('YEAR', e.date) = FUNCTION('YEAR', FUNCTION('NOW()'))");
+        return query1.getResultList();
     }
 }

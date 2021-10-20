@@ -1,35 +1,40 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
-<!doctype html>
-<html lang="pl-PL">
-<link href="../../../css/style.css" rel="stylesheet" type="text/css">
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <title>Członkowie rodziny</title>
+    <%@ include file="../header.jsp" %>
+    <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
 </head>
-<h2> Lista wszystkich członków rodziny </h2>
-<br/>
-<a href="add">
-    Dodaj członka rodziny
-</a>
-<br/><br/>
-<table>
-<thead>
-<tr>
-    <td>Członkowie rodziny</td>
-    <td>Edycja</td>
-    <td>Usuwanie</td>
-</tr>
-</thead>
-<tbody><tr>
-<c:forEach items="${allFamilyMembers}" var="familyMember">
-    <td>${familyMember.nickName}</td>
-<td><a href="edit?idToEdit=${familyMember.id}">Edytuj</a></td>
-<td><a href="remove?toRemoveId=${familyMember.id}">Usuń</a></td></tr>
-</c:forEach>
-    </tbody>
-    </table>
-<br/><br/>
-<a href="..">Powrót do strony głównej</a>
+<div class="container-fluid">
 
-</html>
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <a href="<c:url value="add"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Dodaj członka rodziny</a>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Nasza rodzina</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td>Członkowie rodziny</td>
+                        <td>Edycja</td>
+                    </tr>
+
+                    <tr>
+                        <c:forEach items="${allFamilyMembers}" var="familyMember">
+                        <td>${familyMember.nickName}</td>
+                        <td><a href="edit?idToEdit=${familyMember.id}">Edytuj</a>
+                    </tr>
+                    </td>
+                    </c:forEach>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a href="..">Powrót do strony głównej</a>
+</div>
+<%@ include file="../footer.jsp" %>

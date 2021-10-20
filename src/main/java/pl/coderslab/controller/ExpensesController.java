@@ -3,10 +3,7 @@ package pl.coderslab.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.dao.ExpenseCategoryDao;
 import pl.coderslab.dao.ExpensesDao;
 import pl.coderslab.entity.ExpenseCategory;
@@ -14,6 +11,7 @@ import pl.coderslab.entity.Expenses;
 
 import javax.validation.Valid;
 import java.util.List;
+
 
 @Controller
 public class ExpensesController {
@@ -79,5 +77,11 @@ public class ExpensesController {
             expensesDao.remove(expenses);
         }
         return "redirect:/expensesForm/list";
+    }
+
+    @GetMapping("/expensesForm/month")
+    private String getExpensesByDate(Model model){
+        model.addAttribute("expensesMonth", expensesDao.getExpensesByDate());
+        return "expenses/month";
     }
 }

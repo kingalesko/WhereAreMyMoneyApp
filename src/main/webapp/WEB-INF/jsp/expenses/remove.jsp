@@ -1,9 +1,11 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
-<!doctype html>
-<html lang="pl-PL">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <head>
     <title>Usuwanie</title>
-    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
+    <%@ include file="../header.jsp" %>
+
+    <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
 </head>
 </html>
 <h2>Czy chcesz usunąć ten wydatek: ${expense.shopName} ?</h2>
@@ -15,3 +17,4 @@
 </form>
 <br/><br/>
 <a href="..">Powrót do strony głównej</a>
+<%@ include file="../footer.jsp" %>

@@ -1,21 +1,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
-<!doctype html>
-<html lang="pl-PL">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <head>
     <title>Dochody</title>
-    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
-</head>
-</html>
-<h2> Lista wszystkich dochodów </h2>
-<br/>
-<a href="add">
-    Dodaj dochód
-</a>
-<br/><br/>
+    <%@ include file="../header.jsp" %>
 
-<table>
-<thead>
+    <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
+</head>
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <a href="<c:url value="add"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Dodaj dochód</a>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Lista dochodów</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+<table class="table">
 <tr>
     <td>Źródło dochodu</td>
     <td>Wysokość wynagrodzenia</td>
@@ -24,8 +29,7 @@
     <td>Edycja</td>
     <td>Usuwanie</td>
 </tr>
-</thead>
-<tbody><tr>
+    <tr>
     <c:set var="incomesTotal" value="${0}"/>
 <c:forEach items="${allIncomes}" var="income"><tr>
     <c:set var="incomesTotal" value="${incomesTotal + income.payment}"/>
@@ -36,8 +40,13 @@
     <td><a href="edit?idToEdit=${income.id}">Edytuj</a></td>
     <td><a href="remove?toRemoveId=${income.id}">Usuń</a></td></tr>
 </c:forEach>
-    </tbody>
-    </table><br/>
-Suma dochodów: ${incomesTotal}
-<br/><br/>
-<a href="..">Powrót do strony głównej</a>
+    </table>
+            </div>
+        </div>
+    </div>
+<p class="qtr" id="q1">Suma dochodów: ${incomesTotal}</p>
+    <br/>
+    <a href="..">Powrót do strony głównej</a>
+</div>
+
+<%@ include file="../footer.jsp" %>

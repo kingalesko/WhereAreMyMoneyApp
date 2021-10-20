@@ -1,22 +1,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!doctype html>
-<html lang="pl-PL">
 <head>
     <title>Kredyty</title>
-    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
-</head>
-</html>
+    <%@ include file="../header.jsp" %>
 
-<h2> Lista wszystkich kredytów </h2>
-<br/>
-<a href="add">
-    Dodaj zobowiązanie
-</a>
-<br/><br/>
-<table>
-    <thead>
+    <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
+</head>
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <a href="<c:url value="add"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Dodaj nowy kredyt</a>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Lista kredytów</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+<table class="table">
     <tr>
         <td>Nazwa banku</td>
         <td>Rodzaj kredytu</td>
@@ -27,8 +31,6 @@
         <td>Edycja</td>
         <td>Usuwanie</td>
     </tr>
-    </thead>
-    <tbody>
     <tr>
         <c:set var="loanTotal" value="${0}"/>
         <c:forEach items="${allLoans}" var="loan">
@@ -50,7 +52,11 @@
     <td><a href="remove?toRemoveId=${loan.id}">Usuń</a></td>
     </tr>
     </c:forEach>
-    </tbody>
 </table>
-<br/><br/>
+            </div>
+        </div>
+    </div>
 <a href="..">Powrót do strony głównej</a>
+</div>
+<%@ include file="../footer.jsp" %>
+
