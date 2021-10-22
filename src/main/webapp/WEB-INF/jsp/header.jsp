@@ -51,11 +51,6 @@
                 <span>Członkowie rodziny</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../expensesForm/list">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Wydatki</span></a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link" href="../incomesForm/list">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Dochody</span></a>
@@ -64,6 +59,11 @@
             <a class="nav-link" href="../loansForm/list">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Kredyty</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../expensesForm/list">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Wydatki</span></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../targetForm/list">
