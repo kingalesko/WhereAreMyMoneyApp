@@ -7,23 +7,36 @@
 
     <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
 </head>
-<form:form method="post" modelAttribute="expenses">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+</div>
+<div class="container-fluid">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Dodaj wydatek</h6>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <form:form method="post" modelAttribute="expenses">
 
-    <form:hidden path="id"/>
-
-    Nazwa sklepu: <form:input path="shopName" /> <br />
-    <form:errors path="shopName"/><br />
-    Total price: <form:input path="expense" /> <br />
-    <form:errors path="expense"/><br />
-    Data(DD.MM.RRRR): <form:input path="date" /> <br />
-    <form:errors path="date"/><br />
-    Kategoria: <form:select path="category.id" items="${categories}"
-                         itemValue="id" itemLabel="name"/> <br />
-    <form:errors path="category.id"/><br />
-
-    <input type="submit">
-
-</form:form>
-<br/><br/>
-<a href="..">Powrót do strony głównej</a>
-<%@ include file="../footer.jsp" %>
+                <form:hidden path="id"/>
+            <label for="shopName">Nazwa sklepu</label>
+                <form:input path="shopName" class="form-control"/>
+                <form:errors path="shopName"/><br/><br/>
+            <label for="expense">Cena za zakupy</label>
+                <form:input path="expense" class="form-control"/>
+                <form:errors path="expense"/><br/><br/>
+            <label for="date">Data(DD.MM.RRRR)</label>
+                <form:input path="date" class="form-control"/>
+                <form:errors path="date"/><br/><br/>
+            <label for="category.id">Kategoria</label>
+                <form:select path="category.id" items="${categories}"
+                             itemValue="id" itemLabel="name" class="form-control"/>
+                <form:errors path="category.id"/><br/><br/>
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+            </form:form>
+            <br/><br/>
+            <a href="<c:url value="/expensesForm/list"/>"
+               class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                <i class="fas fa-download fa-sm text-white-50"></i> Lista wydatków</a>
+            <br/><br/>
+            <a href="..">Powrót do strony głównej</a>
+            <%@ include file="../footer.jsp" %>

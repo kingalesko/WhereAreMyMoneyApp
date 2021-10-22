@@ -21,12 +21,12 @@
             <div class="table-responsive">
                 <table class="table">
                     <tr>
-                        <td>Nazwa sklepu</td>
-                        <td>Kwota</td>
-                        <td>Data</td>
-                        <td>Kategoria</td>
-                        <td>Edycja</td>
-                        <td>Usuwanie</td>
+                        <td><b>Nazwa sklepu</b></td>
+                        <td><b>Kwota</b></td>
+                        <td><b>Data</b></td>
+                        <td><b>Kategoria</b></td>
+                        <td><b>Edycja</b></td>
+                        <td><b>Usuwanie</b></td>
                     </tr>
                     <c:set var="expTotal" value="${0}"/>
                     <c:forEach items="${allExpenses}" var="expense">

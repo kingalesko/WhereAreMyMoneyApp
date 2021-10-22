@@ -7,8 +7,8 @@
 
     <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
 </head>
-<div class="container-fluid">
 
+<div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <a href="<c:url value="add"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
@@ -22,10 +22,10 @@
             <div class="table-responsive">
                 <table class="table">
                     <tr>
-                        <td>Cel</td>
-                        <td>Cena</td>
-                        <td>Edycja</td>
-                        <td>Usuwanie</td>
+                        <td><b>Cel</b></td>
+                        <td><b>Cena</b></td>
+                        <td><b>Edycja</b></td>
+                        <td><b>Usuwanie</b></td>
                     </tr>
                     <tr>
                         <c:forEach items="${allTargets}" var="target">

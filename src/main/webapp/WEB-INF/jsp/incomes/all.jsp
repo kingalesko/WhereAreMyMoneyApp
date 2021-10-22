@@ -20,31 +20,33 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-<table class="table">
-<tr>
-    <td>Źródło dochodu</td>
-    <td>Wysokość wynagrodzenia</td>
-    <td>Data wpływu</td>
-    <td>Kogo wynagrodzenie</td>
-    <td>Edycja</td>
-    <td>Usuwanie</td>
-</tr>
-    <tr>
-    <c:set var="incomesTotal" value="${0}"/>
-<c:forEach items="${allIncomes}" var="income"><tr>
-    <c:set var="incomesTotal" value="${incomesTotal + income.payment}"/>
-   <td> ${income.name}</td>
-   <td>${income.payment}</td>
-   <td>${income.date}</td>
-  <td>  ${income.familyMember.nickName}</td>
-    <td><a href="edit?idToEdit=${income.id}">Edytuj</a></td>
-    <td><a href="remove?toRemoveId=${income.id}">Usuń</a></td></tr>
-</c:forEach>
-    </table>
+                <table class="table">
+                    <tr>
+                        <td><b>Źródło dochodu</b></td>
+                        <td><b>Wysokość wynagrodzenia</b></td>
+                        <td><b>Data wpływu</b></td>
+                        <td><b>Kogo wynagrodzenie</b></td>
+                        <td><b>Edycja</b></td>
+                        <td><b>Usuwanie</b></td>
+                    </tr>
+                    <tr>
+                        <c:set var="incomesTotal" value="${0}"/>
+                    <c:forEach items="${allIncomes}" var="income">
+                        <tr>
+                            <c:set var="incomesTotal" value="${incomesTotal + income.payment}"/>
+                            <td> ${income.name}</td>
+                            <td>${income.payment}</td>
+                            <td>${income.date}</td>
+                            <td> ${income.familyMember.nickName}</td>
+                            <td><a href="edit?idToEdit=${income.id}">Edytuj</a></td>
+                            <td><a href="remove?toRemoveId=${income.id}">Usuń</a></td>
+                        </tr>
+                    </c:forEach>
+                </table>
             </div>
         </div>
     </div>
-<p class="qtr" id="q1">Suma dochodów: ${incomesTotal}</p>
+    <p class="qtr" id="q1">Suma dochodów: ${incomesTotal}</p>
     <br/>
     <a href="..">Powrót do strony głównej</a>
 </div>

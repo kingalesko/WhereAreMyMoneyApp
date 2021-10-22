@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="..">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -46,27 +46,27 @@
                 <span>Home</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="familyForm/list">
+            <a class="nav-link" href="../familyForm/list">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Członkowie rodziny</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="expensesForm/list">
+            <a class="nav-link" href="../expensesForm/list">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Wydatki</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="incomesForm/list">
+            <a class="nav-link" href="../incomesForm/list">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Dochody</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="loansForm/list">
+            <a class="nav-link" href="../loansForm/list">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Kredyty</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="targetForm/list">
+            <a class="nav-link" href="../targetForm/list">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Cele</span></a>
         </li>

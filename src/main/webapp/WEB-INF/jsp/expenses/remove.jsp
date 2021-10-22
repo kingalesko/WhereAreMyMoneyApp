@@ -4,16 +4,15 @@
 <head>
     <title>Usuwanie</title>
     <%@ include file="../header.jsp" %>
-
     <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
 </head>
-</html>
-<h2>Czy chcesz usunąć ten wydatek: ${expense.shopName} ?</h2>
-
+<h3>Czy chcesz usunąć ten wydatek: ${expenses.shopName} ?</h3>
+<br/><br/>
+<div class="form-group">
 <form method="post">
-    <input type="hidden" name="toRemoveId" value="${expense.id}">
-    <button type="submit" value="yes" name="confirmed">TAK</button>
-    <button type="submit" value="no" name="confirmed">NIE</button>
+    <input type="hidden" name="toRemoveId" value="${expense.id}"><br/><br/>
+    <button type="submit" value="yes" name="confirmed" class="btn btn-primary">TAK</button>
+    <button type="submit" value="no" name="confirmed" class="btn btn-primary">NIE</button><br/><br/>
 </form>
 <br/><br/>
 <a href="..">Powrót do strony głównej</a>

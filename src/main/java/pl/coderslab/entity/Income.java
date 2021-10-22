@@ -20,7 +20,7 @@ public class Income {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Size(min = 1, max = 30, message = "Maksymalna długość 30 znaków.")
+    @Size(min = 1, max = 30, message = "Nazwa musi mieć od 2 do 20 znaków.")
     private String name;
 
     @Min(value = 1, message = "Wartość musi być większa niż 1.")

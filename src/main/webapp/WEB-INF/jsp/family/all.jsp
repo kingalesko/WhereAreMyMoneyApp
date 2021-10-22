@@ -20,14 +20,16 @@
             <div class="table-responsive">
                 <table class="table">
                     <tr>
-                        <td>Członkowie rodziny</td>
-                        <td>Edycja</td>
+                        <td><b>Członkowie rodziny</b></td>
+                        <td><b>Edycja</b></td>
+                        <td><b>Usuwanie</b></td>
                     </tr>
 
                     <tr>
                         <c:forEach items="${allFamilyMembers}" var="familyMember">
                         <td>${familyMember.nickName}</td>
                         <td><a href="edit?idToEdit=${familyMember.id}">Edytuj</a>
+                        <td><a href="remove?toRemoveId=${familyMember.id}">Usuń</a></td>
                     </tr>
                     </td>
                     </c:forEach>

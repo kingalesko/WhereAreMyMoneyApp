@@ -7,15 +7,15 @@
 
     <link href="<c:url value="../../../theme/css/sb-admin-2.css"/>" rel="stylesheet">
 </head>
-<body>
-<h2>Czy chcesz usunąć cel?</h2>
-
-<form method="post">
-    <input type="hidden" name="toRemoveId" value="${target.id}">
-    <button type="submit" value="yes" name="confirmed">TAK</button>
-    <button type="submit" value="no" name="confirmed">NIE</button>
-</form>
-</body>
+<h3>Czy chcesz usunąć cel: ${targets.targetName}?</h3>
 <br/><br/>
-<a href="..">Powrót do strony głównej</a>
-<%@ include file="../footer.jsp" %>
+<div class="form-group">
+    <form method="post">
+        <input type="hidden" name="toRemoveId" value="${target.id}"><br/><br/>
+        <button type="submit" value="yes" name="confirmed" class="btn btn-primary">TAK</button>
+        <button type="submit" value="no" name="confirmed" class="btn btn-primary">NIE</button>
+        <br/><br/>
+    </form>
+    <br/><br/>
+    <a href="..">Powrót do strony głównej</a>
+    <%@ include file="../footer.jsp" %>

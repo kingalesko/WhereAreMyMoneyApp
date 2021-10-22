@@ -15,7 +15,7 @@ public class Loans {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Size(min = 3, max = 20, message = "Długość znaków od 3 do 20.")
+    @Size(min = 3, max = 40, message = "Długość znaków od 3 do 40.")
     private String bankName;
 
     @ManyToOne
