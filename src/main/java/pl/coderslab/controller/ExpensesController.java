@@ -10,6 +10,7 @@ import pl.coderslab.entity.ExpenseCategory;
 import pl.coderslab.entity.Expenses;
 
 import javax.validation.Valid;
+import java.time.Month;
 import java.util.List;
 
 
@@ -79,9 +80,9 @@ public class ExpensesController {
         return "redirect:/expensesForm/list";
     }
 
-    @GetMapping("/expensesForm/month")
-    private String getExpensesByDate(Model model){
-        model.addAttribute("expensesMonth", expensesDao.getExpensesByDate());
+    @GetMapping("/expensesForm/month/{month}")
+    private String findAllByMonth(@PathVariable Month month, Model model){
+        model.addAttribute("expensesMonth", expensesDao.findAllByMonth(month));
         return "expenses/month";
     }
 }

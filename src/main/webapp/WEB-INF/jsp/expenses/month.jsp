@@ -1,7 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
-<!doctype html>
-<html lang="pl-PL">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <title>Wydatki</title>
     <%@ include file="../header.jsp" %>
@@ -12,6 +10,7 @@
 <h2> Lista wydatków tego miesiąca</h2>
 <br/>
 <br/>
+
 <table>
     <thead>
     <tr>

@@ -6,6 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
+import java.awt.print.Book;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,8 +38,10 @@ public class ExpensesDao {
         Query query = entityManager.createQuery("SELECT a from Expenses a");
         return query.getResultList();
     }
-    public List<Expenses>getExpensesByDate(){
-        Query query1 = entityManager.createQuery("select e from Expenses e WHERE FUNCTION('MONTH', e.date) = FUNCTION('MONTH', FUNCTION('NOW()')) AND function('YEAR', e.date) = FUNCTION('YEAR', FUNCTION('NOW()'))");
-        return query1.getResultList();
+
+    public List<Expenses> findAllByMonth(Month month) {
+        Query query = entityManager.createQuery("select e from Expenses e where function('MONTH', e.date) = :givenMonth");
+        query.setParameter("givenMonth", month);
+        return query.getResultList();
     }
 }
