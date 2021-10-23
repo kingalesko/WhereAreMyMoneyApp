@@ -12,15 +12,12 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <a href="<c:url value="add"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
             <i class="fas fa-download fa-sm text-white-50"></i> Dodaj wydatek</a>
-<%--        <div class="d-sm-flex align-items-center justify-content-between mb-4">--%>
-<%--            <c:forEach var="month" items="month" begin="1" end="12">--%>
-<%--            <select>--%>
-<%--            <option>${month}</option>--%>
-<%--            </select>--%>
-<%--            </c:forEach>--%>
-<%--            <a href="<c:url value="month/{month}"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">--%>
-<%--                <i class="fas fa-download fa-sm text-white-50"></i> Miesiąc</a>--%>
     </div>
+<%--    <div class="d-sm-flex align-items-center justify-content-between mb-4">--%>
+<%--        <form:form>--%>
+<%--        <form:select path="months.id" items="${months}"--%>
+<%--                     itemValue="id" itemLabel="name" class="form-control"/>--%>
+<%--        </form:form></div>--%>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Lista wydatków</h6>
@@ -52,10 +49,11 @@
             </div>
         </div>
     </div>
-    Suma wydatków: ${expTotal} <br/>
-    <a href="..">Powrót do strony głównej</a>
+    Suma wydatków: ${expTotal} <br/><br/>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <a href="<c:url value=".."/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Powrót do strony głównej </a>
 </div>
 
 <%@ include file="../footer.jsp" %>
-</html>
 

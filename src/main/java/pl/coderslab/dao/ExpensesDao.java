@@ -39,9 +39,8 @@ public class ExpensesDao {
         return query.getResultList();
     }
 
-    public List<Expenses> findAllByMonth(Month month) {
-        Query query = entityManager.createQuery("select e from Expenses e where function('MONTH', e.date) = :givenMonth");
-        query.setParameter("givenMonth", month);
+    public List<Expenses> findAllByMonth(String month) {
+        Query query = entityManager.createQuery("select e from Expenses e where e.date = '%:month%' ");
         return query.getResultList();
     }
 }

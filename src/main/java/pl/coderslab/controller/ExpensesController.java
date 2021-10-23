@@ -6,11 +6,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.dao.ExpenseCategoryDao;
 import pl.coderslab.dao.ExpensesDao;
+import pl.coderslab.dao.MonthsDao;
 import pl.coderslab.entity.ExpenseCategory;
 import pl.coderslab.entity.Expenses;
+import pl.coderslab.entity.Months;
 
 import javax.validation.Valid;
-import java.time.Month;
 import java.util.List;
 
 
@@ -19,11 +20,16 @@ public class ExpensesController {
 
     private final ExpensesDao expensesDao;
     private final ExpenseCategoryDao expenseCategoryDao;
+    private final MonthsDao monthsDao;
 
-    public ExpensesController(ExpensesDao expensesDao, ExpenseCategoryDao expenseCategoryDao) {
+    public ExpensesController(ExpensesDao expensesDao, ExpenseCategoryDao expenseCategoryDao, MonthsDao monthsDao) {
         this.expensesDao = expensesDao;
         this.expenseCategoryDao = expenseCategoryDao;
+        this.monthsDao = monthsDao;
     }
+
+    @ModelAttribute("months")
+    public List<Months> allMonths(){return monthsDao.findAll();}
 
     @ModelAttribute("categories")
     public List<ExpenseCategory> allCategories() {
@@ -80,8 +86,8 @@ public class ExpensesController {
         return "redirect:/expensesForm/list";
     }
 
-    @GetMapping("/expensesForm/month/{month}")
-    private String findAllByMonth(@PathVariable Month month, Model model){
+    @GetMapping("/expensesForm/month")
+    private String findAllByMonth(Model model, @RequestParam String month){
         model.addAttribute("expensesMonth", expensesDao.findAllByMonth(month));
         return "expenses/month";
     }

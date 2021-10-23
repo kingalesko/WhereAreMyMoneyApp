@@ -28,5 +28,7 @@
                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                 <i class="fas fa-download fa-sm text-white-50"></i> Lista członków rodziny</a>
             <br/><br/>
-            <a href="..">Powrót do strony głównej</a>
-            <%@ include file="../footer.jsp" %>
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <a href="<c:url value=".."/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                        <i class="fas fa-download fa-sm text-white-50"></i> Powrót do strony głównej </a>
+                </div>            <%@ include file="../footer.jsp" %>
